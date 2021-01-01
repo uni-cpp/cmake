@@ -1,0 +1,10 @@
+if( CMAKE_CXX_COMPILER_ID STREQUAL "GNU" OR CMAKE_CXX_COMPILER_ID MATCHES "Clang" )
+    set( WERROR_FLAGS "-Werror" )
+endif( )
+
+function( treat_all_warnings_as_errors )
+    if( DISABLE_ALL_WERROR OR ( NOT ENABLE_WERROR ) )
+        return( )
+    endif( )
+    set( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${WERROR_FLAGS}" PARENT_SCOPE )
+endfunction( )

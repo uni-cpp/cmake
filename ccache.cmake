@@ -1,0 +1,10 @@
+find_program( CCACHE ccache )
+
+if( CCACHE AND CMAKE_USE_CCACHE )
+    message( STATUS "CCACHE is enabled" )
+    set_property( GLOBAL PROPERTY RULE_LAUNCH_COMPILE ${CCACHE} )
+elseif( CMAKE_USE_CCACHE )
+    message( FATAL_ERROR "CCACHE requested but not found" )
+else( )
+    message( STATUS "CCACHE will not used" )
+endif( )

@@ -1,7 +1,7 @@
-option( CMAKE_USE_GOLD "Use gold linker" ON )
-option( ENABLE_MULTITHREADING_LINKAGE "Enable multithreading linkage (gold only)" ON )
+option( CMAKE_USE_GOLD "Use gold linker" OFF )
+option( ENABLE_MULTITHREADING_LINKAGE "Enable multithreading linkage (gold only)" OFF )
 
-option( CMAKE_USE_CCACHE "Cmake use ccache" ON )
+option( CMAKE_USE_CCACHE "Cmake use ccache" OFF )
 
 option( ENABLE_DIAGNOSTIC_COLORS "Enable diagnostic's colors" ON )
 

@@ -2,8 +2,8 @@ find_program( GCOV gcov )
 
 if( CODE_COVERAGE AND GCOV)
     message( STATUS "Code coverage requested and will be used" )
-    set( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -coverage -fprofile-arcs -ftest-coverage" )
-    set( CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -coverage -lgcov" )
+    set( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fprofile-arcs -ftest-coverage" )
+#    set( CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -coverage -lgcov" )
 
     if( NOT CMAKE_BUILD_TYPE STREQUAL "Debug" )
         message( WARNING "Code coverage build type is not DEBUG, results will be misleading" )

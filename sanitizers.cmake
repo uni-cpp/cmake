@@ -22,7 +22,7 @@ if( THREAD_SANITIZER )
     message( STATUS "Enabled thread sanitizer" )
     set( TSAN_FLAGS "-fsanitize=thread" )
     set( TSAN_ADDITIONAL_FLAGS "-fno-omit-frame-pointer" )
-    set( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${ASAN_FLAGS} ${TSAN_ADDITIONAL_FLAGS}" )
+    set( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${TSAN_FLAGS} ${TSAN_ADDITIONAL_FLAGS}" )
     set( CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${TSAN_FLAGS}" )
 endif( )
 
